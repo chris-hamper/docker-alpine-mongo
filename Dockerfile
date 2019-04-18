@@ -1,6 +1,7 @@
-FROM alpine:edge
+FROM alpine:3.8
 
 RUN apk add --no-cache mongodb
+RUN mongod --version
 
 VOLUME /data/db
 EXPOSE 27017 28017
